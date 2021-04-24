@@ -1,3 +1,10 @@
+# Features
+  1. There is a header, 4 cards with api timestamps, and Start button lastly live current unix time stamp.
+  2. Clicking on start button all 4 api start fetching at the same time. And start time stamp is rendered
+  3. When prsing api finishes end time stamp renders for all apis in deifferent cards.
+  4. After parsing data from api, the data starts saving in 4 different indexedDBs the_name1, the_name2, the_name3 and the_name4, and the start save time stamp is rendered.
+  5. After saving the end save time stamp is rendered. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
