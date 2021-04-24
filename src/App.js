@@ -176,8 +176,23 @@ function App() {
       };
     };
   };
+  
+  const handleReset = () => {
+    var req1 = indexedDB.deleteDatabase("the_name1");
+    req1.onsuccess = function () {
+      console.log("Deleted database successfully");
+    };
+    req1.onerror = function () {
+      console.log("Couldn't delete database");
+    };
+    req1.onblocked = function () {
+      console.log(
+        "Couldn't delete database due to the operation being blocked"
+      );
+    };
+  };
 
-  useEffect(() => {}, []);
+//   useEffect(() => {}, []);
 
   return (
     <div className="app">
@@ -212,6 +227,13 @@ function App() {
       <div className="buttons">
         <button onClick={handleStart} className="start__button">
           Start
+        </button>
+        <button
+          style={{ display: "none" }}
+          onClick={handleReset}
+          className="start__button"
+        >
+          Reset
         </button>
         <div className="one__button">
           <button className="start__button">Button 1</button>
